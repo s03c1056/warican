@@ -12,7 +12,7 @@
                 
                     <!--幹事だけに表示する画面-->
                     <div class="pb-3">
-                        <input id="copyTarget" class="urlcopy" type="textarea" value="https://75dadab680c248839d271828d1603090.vfs.cloud9.ap-northeast-1.amazonaws.com/join/?_key={{$party->_key}}" readonly>
+                        <input id="copyTarget" class="urlcopy" type="textarea" value="{{ str_replace('/plan/store', '', url()->current()) }}/join/?_key={{$party->_key}}" readonly>
                         <button onclick="copyToClipboard()">URLをコピー</button>
                     </div>
                     <script>
